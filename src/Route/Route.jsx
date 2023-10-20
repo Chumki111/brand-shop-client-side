@@ -5,16 +5,29 @@ import AddProduct from "../Page/AddProduct/AddProduct";
 import MyCart from "../Page/MyCart/MyCart";
 import Login from "../Components/Path/Login";
 import Register from "../Components/Path/Register";
+import ErrorPage from "../Page/Error/ErrorPage";
+import LogoPage from "../Components/Banner/Section/LogoPage";
 
 
 const Route = createBrowserRouter([
     {
         path:'/',
         element:<MainLayout></MainLayout>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader:() =>fetch('data.json'),
+                
+            },
+            {
+                path:'/brand/:name',
+                element:<LogoPage></LogoPage>,
+                // loader:({params}) =>fetch(`http://localhost:5000/brandName/${params.name}`)
+                
+                
+               
             },
             {
                 path:'/addProduct',

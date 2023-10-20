@@ -1,0 +1,27 @@
+[
+    {    "id": 1,
+        "name": "Apple",
+        "image_url": "https://i.ibb.co/pQxzc8P/sunny-hassan-E5o4-Jm-PG-k-E-unsplash-1.jpg"
+    },
+    {   "id": 2,
+      "name": "Sony",
+      "image_url": "https://i.ibb.co/rspM5yJ/boliviainteligente-PMZF-Uqn-QU-unsplash.jpg"
+    },
+   
+    {    "id": 3,
+        "name": "Samsung",
+        "image_url": "https://i.ibb.co/QXrd1Xx/jonathan-kemper-po-Sms2-Ezf-NY-unsplash.jpg"
+    },
+    {     "id": 4,
+        "name": "Google",
+        "image_url": "https://i.ibb.co/gJ5TZxG/mitchell-luo-jz4ca36o-J-M-unsplash.jpg"
+    },
+    {   "id": 5,
+      "name": "Intel",
+      "image_url": "https://i.ibb.co/XXmSQFv/rubaitul-azad-3-Wh-Pfo-OX888-unsplash.jpg"
+    },
+    {    "id": 6,
+        "name": "Microsoft",
+      "image_url": "https://i.ibb.co/9vqZjxv/sunder-muthukumaran-q-AR2ndj-OAs-E-unsplash.jpg"
+    }
+  ]
