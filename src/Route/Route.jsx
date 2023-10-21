@@ -24,7 +24,7 @@ const Route = createBrowserRouter([
             {
                 path:'/brand/:name',
                 element:<LogoPage></LogoPage>,
-                // loader:({params}) =>fetch(`http://localhost:5000/brandName/${params.name}`)
+                loader:({params}) =>fetch(`http://localhost:5000/brandName/${params.name}`)
                 
                 
                
