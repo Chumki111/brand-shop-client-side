@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Context/UserContext";
 
 
 const Navbar = () => {
@@ -28,12 +30,8 @@ const Navbar = () => {
         >
             My Cart
         </NavLink></li>
-
-
-
-
-
-    </>
+</>
+const {logOut,user} = useContext(AuthContext)
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -54,7 +52,26 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end font-fontRancho">
-                    <Link to='/login'><button className="btn bg-[#FFD700]">Login</button></Link>
+                   
+                     {
+                        user?.email ? <>
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user.photoURL} alt="" />
+                                </div>
+                            </label>
+                            <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+                           <Link to='/'> <button className="btn  btn-ghost"
+                                        onClick={logOut}
+                                    >Logout</button></Link>
+                            </>
+                       
+                            :
+                            <Link to='/login'>
+                                <button className="btn bg-[#FBBF24]">Login</button>
+                            </Link>
+                    }
+                   
                 </div>
             </div>
         </div>

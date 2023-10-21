@@ -4,7 +4,7 @@ const Details = () => {
     const DetailsData= useLoaderData();
     const { image, name, someDescription, price, brandName } =DetailsData
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center mt-10 mb-10 h-[70%]">
             <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img

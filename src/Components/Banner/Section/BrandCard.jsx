@@ -70,6 +70,8 @@ const BrandCard = ({ brand }) => {
    
   </div>
   <div className="p-6">
+  <Link to={`/updates/${_id}`}>
+
   <button
       className="btn btn-block bg-[#FFD700]"
       type="button"
@@ -77,6 +79,7 @@ const BrandCard = ({ brand }) => {
     >
       Update
     </button>
+  </Link>
   </div>
   </div>
 </div>
