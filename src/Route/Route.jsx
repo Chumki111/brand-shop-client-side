@@ -7,6 +7,7 @@ import Login from "../Components/Path/Login";
 import Register from "../Components/Path/Register";
 import ErrorPage from "../Page/Error/ErrorPage";
 import LogoPage from "../Components/Banner/Section/LogoPage";
+import Details from "../Components/Banner/Section/Details";
 
 
 const Route = createBrowserRouter([
@@ -28,6 +29,11 @@ const Route = createBrowserRouter([
                 
                 
                
+            },
+            {
+                path:'/details/:_id',
+                element:<Details></Details>,
+                loader:({params}) => fetch(`http://localhost:5000/brandName/brand/${params._id}`)
             },
             {
                 path:'/addProduct',

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { useLoaderData, useParams, } from "react-router-dom";
 import BrandCard from "./brandCard";
 
@@ -7,24 +7,21 @@ import BrandCard from "./brandCard";
 const LogoPage = () => {
     const {name}= useParams();
 
-    // const [brandCard,setBrandCard] = useState([])
+   
    
 
     console.log(name)
     const loadedData = useLoaderData();
     console.log(loadedData)
-    // useEffect(()=>{
-        
-
-    //     const findBrand = loadedData?.find(brand =>brand.brandName===name);
-    // console.log(findBrand)
-    // },[name,loadedData])
+   
     return (
-        <div>
+        <div className="grid grid-cols-3 gap-4">
             {
                 loadedData?.map(brand => <BrandCard key={brand._id} brand={brand}></BrandCard>)
             }
+            
         </div>
+        
     );
 };
 
