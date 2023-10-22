@@ -69,12 +69,12 @@ const Updates = () => {
                    
                     <select className="select select-bordered" defaultValue={brandName} name="brandName" required>
                         <option disabled selected>Chose a brand</option>
-                        <option value="option1">Apple</option>
-                        <option value="option2">Sony</option>
-                        <option value="option3">Samsung</option>
-                        <option value="option4">Google</option>
-                        <option value="option5">Intel</option>
-                        <option value="option6">Microsoft</option>
+                        <option>Apple</option>
+                        <option>Sony</option>
+                        <option>Samsung</option>
+                        <option>Google</option>
+                        <option>Intel</option>
+                        <option>Microsoft</option>
                     </select>
                 </div>
                 <div className="form-control">

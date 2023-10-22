@@ -95,8 +95,14 @@ const AddProduct = () => {
                     </label>
                     <input type="text" placeholder="Rating" className="input input-bordered" name="rating" required />
                 </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text">Description</span>
+                    </label>
+                    <input type="text" placeholder="Rating" className="input input-bordered" name="someDescription" required />
+                </div>
                 
-                 <div className="mt-3 "><button className="btn btn-block bg-[#FFD700]">Submit</button></div>
+                 <div className="mt-3 "><button className="btn btn-block bg-[#FFD700]">Add Product</button></div>
             </form>
 
         </div>
