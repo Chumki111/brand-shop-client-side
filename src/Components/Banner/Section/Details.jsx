@@ -1,8 +1,36 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Details = () => {
     const DetailsData= useLoaderData();
     const { image, name, someDescription, price, brandName } =DetailsData
+
+       const handleAddCart = () =>{
+       const newData ={image, name, someDescription, price, brandName}
+        fetch('http://localhost:5000/cart',{
+          method :'POST',
+          headers :{
+            'content-type' : 'application/json'
+          },
+          body :JSON.stringify(newData)
+        })
+
+        .then(res =>res.json())
+        .then(data => {
+          console.log(data)
+          if(data.insertedId){
+            Swal.fire({
+              title: 'Success!',
+              text: 'Your product added to cart successfully',
+              icon: 'success',
+              confirmButtonText: 'Cool'
+            })
+          }
+        })
+
+       }
+
+   
     return (
         <div className="flex justify-center items-center mt-10 mb-10 h-[70%]">
             <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -28,7 +56,7 @@ const Details = () => {
     </p>
     <a className="inline-block" href="#">
       <button
-        className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+       onClick={handleAddCart}  className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
         Add To Cart
