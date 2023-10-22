@@ -1,9 +1,10 @@
 
 import { useContext } from "react";
-import toast from "react-hot-toast";
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/UserContext";
 import { FcGoogle} from 'react-icons/fc';
+import Swal from "sweetalert2";
 
 const Login = () => {
     const {signInUser,signInGoogle} = useContext(AuthContext)
@@ -11,11 +12,11 @@ const Login = () => {
     const navigate= useNavigate()
     const handleLogin = e =>{
         e.preventDefault()
-        console.log(e.currentTarget)
+       
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
-        console.log(email,password)
+       
         
 
         
@@ -23,14 +24,26 @@ const Login = () => {
     signInUser(email,password)
     .then(result =>{
         console.log(result.user)
-        toast.success('login successfully')
+       
+        Swal.fire({
+            title: 'Success!',
+            text: 'login successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
         navigate(location?.state ? location.state : '/')
        
        
     })
     .catch(error =>{
         console.error(error)
-       toast.error('email and password does not match with register email and password')
+        Swal.fire({
+            title: 'Error!',
+            text: 'email and password does not match with register email and password',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          })
+  
         
      })
 

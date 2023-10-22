@@ -2,8 +2,9 @@ import { FcGoogle} from 'react-icons/fc';
 import { Link ,useNavigate } from 'react-router-dom';
 import { useContext } from "react";
 import { AuthContext } from "../../Context/UserContext";
-import toast from "react-hot-toast";
+
 import { updateProfile } from "firebase/auth";
+import Swal from 'sweetalert2';
 
 const Register = () => {
 
@@ -22,17 +23,35 @@ const Register = () => {
 
          // validation
          if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]{6,}$/.test(password)) {
-            toast.error('at least 6 characters,one uppercase and a special letter')
+            
+            Swal.fire({
+                title: 'Error!',
+                text: 'at least 6 characters,one uppercase and a special letter',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+              })
             return;
         } else if(password !== confirmPassword){
-            toast.error('password and conform password same na')
+            Swal.fire({
+                title: 'Error!',
+                text: 'password and conform password same na',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+              })
+            
             return;
         }
         // createUser
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
-                toast.success('Created an account successfully')
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Created an account successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                // toast.success('Created an account successfully')
                 navigate('/')
                 // update PhotoURl
                 updateProfile(result.user,{
@@ -45,7 +64,13 @@ const Register = () => {
             })
             .catch(error => {
                 console.error(error)
-                toast.error('Email already in use')
+                // toast.error('Email already in use')
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Email already in use',
+                    icon: 'error',
+                    confirmButtonText: 'Ok'
+                  })
             
             })
     }

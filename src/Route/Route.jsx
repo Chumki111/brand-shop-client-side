@@ -9,6 +9,7 @@ import ErrorPage from "../Page/Error/ErrorPage";
 import LogoPage from "../Components/Banner/Section/LogoPage";
 import Details from "../Components/Banner/Section/Details";
 import Updates from "../Components/Banner/Section/Updates";
+import PrivetRoute from "./PrivetRoute";
 
 
 const Route = createBrowserRouter([
@@ -20,7 +21,7 @@ const Route = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:() =>fetch('data.json'),
+                loader:() =>fetch('/data.json'),
                 
             },
             {
@@ -33,12 +34,12 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/details/:_id',
-                element:<Details></Details>,
+                element:<PrivetRoute><Details></Details></PrivetRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/brandName/brand/${params._id}`)
             },
             {
                 path:'/updates/:_id',
-                element:<Updates></Updates>,
+                element:<PrivetRoute><Updates></Updates></PrivetRoute>,
                 loader:({params}) => fetch(`http://localhost:5000/brandName/brand/${params._id}`)
             },
             {
