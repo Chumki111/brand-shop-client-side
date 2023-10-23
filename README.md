@@ -1,4 +1,4 @@
-# React + Vite
+# BrandShop Project Features
 
 I'll need some context about the type of project you're referring too. However, I'll provide general project features that could be relevant across different types of projects.😘
  - User Authentication and Authorization. 

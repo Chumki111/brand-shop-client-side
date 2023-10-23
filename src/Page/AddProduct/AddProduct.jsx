@@ -15,7 +15,7 @@ const AddProduct = () => {
         const NewBrand={name,brandName,image,type,price,rating,someDescription}
         console.log(NewBrand)
 
-        fetch('http://localhost:5000/brandName',{
+        fetch('https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/brandName',{
            method:'POST',
            headers:{
             'content-type':'application/json'

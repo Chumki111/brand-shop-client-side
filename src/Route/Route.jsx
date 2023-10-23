@@ -27,7 +27,7 @@ const Route = createBrowserRouter([
             {
                 path:'/brand/:name',
                 element:<LogoPage></LogoPage>,
-                loader:({params}) =>fetch(`http://localhost:5000/brandName/${params.name}`)
+                loader:({params}) =>fetch(`https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/brandName/${params.name}`)
                 
                 
                
@@ -35,12 +35,12 @@ const Route = createBrowserRouter([
             {
                 path:'/details/:_id',
                 element:<PrivetRoute><Details></Details></PrivetRoute>,
-                loader:({params}) => fetch(`http://localhost:5000/brandName/brand/${params._id}`)
+                loader:({params}) => fetch(`https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/brandName/brand/${params._id}`)
             },
             {
                 path:'/updates/:_id',
                 element:<PrivetRoute><Updates></Updates></PrivetRoute>,
-                loader:({params}) => fetch(`http://localhost:5000/brandName/brand/${params._id}`)
+                loader:({params}) => fetch(`https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/brandName/brand/${params._id}`)
             },
             {
                 path:'/addProduct',
@@ -49,7 +49,7 @@ const Route = createBrowserRouter([
             {
                 path:'/myCart',
                 element:<PrivetRoute><MyCart></MyCart></PrivetRoute>,
-                loader:() => fetch('http://localhost:5000/cart')
+                loader:() => fetch('https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/cart')
             },
             {
                 path:'/login',

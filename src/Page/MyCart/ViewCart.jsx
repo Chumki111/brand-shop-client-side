@@ -19,7 +19,7 @@ const ViewCart = ({ cart ,carts,setCarts}) => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        fetch(`http://localhost:5000/cart/${_id}`,{
+        fetch(`https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/cart/${_id}`,{
          method :'DELETE'
         })
           .then(res => res.json())

@@ -8,7 +8,7 @@ const Details = () => {
 
        const handleAddCart = () =>{
        const newData ={image, name, someDescription, price, brandName,rating}
-        fetch('http://localhost:5000/cart',{
+        fetch('https://brand-shop-assignment-server-3lbttrws9-chumki111.vercel.app/cart',{
           method :'POST',
           headers :{
             'content-type' : 'application/json'
