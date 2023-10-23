@@ -58,6 +58,7 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
+                    <img className="w-10" src="https://i.ibb.co/YkffRhg/blank-logo-design-for-brand-13.png" alt="" />
                     <a className="btn btn-ghost normal-case text-xl">BrandShop</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">

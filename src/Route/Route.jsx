@@ -44,7 +44,7 @@ const Route = createBrowserRouter([
             },
             {
                 path:'/addProduct',
-                element:<AddProduct></AddProduct>
+                element:<PrivetRoute><AddProduct></AddProduct></PrivetRoute>
             },
             {
                 path:'/myCart',
