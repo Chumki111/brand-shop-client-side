@@ -3,10 +3,10 @@ import Swal from "sweetalert2";
 
 const Details = () => {
     const DetailsData= useLoaderData();
-    const { image, name, someDescription, price, brandName } =DetailsData
+    const { image, name, someDescription, price, brandName,rating } =DetailsData
 
        const handleAddCart = () =>{
-       const newData ={image, name, someDescription, price, brandName}
+       const newData ={image, name, someDescription, price, brandName,rating}
         fetch('http://localhost:5000/cart',{
           method :'POST',
           headers :{
@@ -33,7 +33,7 @@ const Details = () => {
    
     return (
         <div className="flex justify-center items-center mt-10 mb-10 h-[70%]">
-            <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div className="relative flex w-full max-w-[52rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
   <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none shrink-0 rounded-xl bg-clip-border">
     <img
       src={image}

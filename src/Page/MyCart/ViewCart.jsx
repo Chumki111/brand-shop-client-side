@@ -1,8 +1,9 @@
 
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
+import Star from '../../Components/Banner/Section/Star';
 const ViewCart = ({ cart ,carts,setCarts}) => {
-  const { _id, image, name, price, brandName } = cart;
+  const { _id, image, name, price, brandName ,rating} = cart;
 
   const handleDelete = _id => {
     console.log(_id)
@@ -57,6 +58,7 @@ const ViewCart = ({ cart ,carts,setCarts}) => {
             <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
               Price : {price}
             </p>
+            <Star rating={rating}></Star>
 
             <a className="inline-block" href="#">
               <button

@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import Star from './Star';
 
 
 
@@ -19,48 +20,43 @@ const BrandCard = ({ brand }) => {
       src={image} className='h-96 w-full'
       alt="ui/ux review check"
     />
-    <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+    <div className="absolute  inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
    
   </div>
-  <div className="p-6 flex flex-col">
-    <div className="flex items-center justify-between mb-3">
+  <div className="p-6 ">
+    <div className="flex items-center justify-between mb-3 ">
       <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
         {name}
       </h5>
      
       <p className="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
-          className="-mt-0.5 h-5 w-5 text-yellow-700"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-        {rating}
+      <Star rating={rating}></Star>
       </p>
     </div>
+    <div className="flex items-center justify-between mb-3 ">
     <h5 className="block text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
       Brand-Name : {brandName}
       </h5>
-    <h5 className="block text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+     
+      <h5 className="block text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
       Type : {type}
       </h5>
-    <p className=" font-fontRaleway text-justify text-base antialiased font-light leading-relaxed text-gray-700 flex flex-col ">
-      {someDescription}
-    </p>
-    <p className=" font-sans text-xl font-medium antialiased leading-relaxed text-gray-700 flex flex-col ">
+    </div>
+    
+      <p className=" font-sans text-xl font-medium antialiased leading-relaxed text-gray-700 flex flex-col ">
       Price : {price}
     </p>
+     
+   <div className='flex-grow'>
+   <p className=" font-fontRaleway   text-justify text-base antialiased font-light leading-relaxed text-gray-700 flex flex-col ">
+      {someDescription}
+    </p>
+   </div>
+   
    
   </div>
-  <div className='flex-grow'>
-  <div className="px-6   pt-3 flex-grow">
+  <div className=''>
+  <div className="px-6   pt-3 ">
     <Link to={`/details/${_id}`}><button
       className=" btn btn-block bg-[#FFD700]"
       type="button"
