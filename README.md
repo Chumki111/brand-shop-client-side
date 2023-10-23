@@ -7,4 +7,4 @@ I'll need some context about the type of project you're referring too. However, 
  - integrate a secure payment gateway to facilitate transactions or subscriptions within the application. 
  - If the user wants to delete the product, he can update the product
 
-- Live Link [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) 
+- Live Link [https://database-brand-assignment.web.app/](https://database-brand-assignment.web.app/) 
