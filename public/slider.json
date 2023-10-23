@@ -1,0 +1,20 @@
+[
+    {
+      "image": "https://i.ibb.co/8BP8HZn/aidan-hancock-Xd7-Sy-Zc-H1s-A-unsplash.jpg",
+     
+      "subTitle": "Apple laptops are celebrated for their remarkable combination of innovation and design. With stunning Retina displays, these laptops offer a visual experience that is both vibrant and immersive, making them ideal for creative tasks and multimedia consumption.  ",
+      "interval": 1500
+    },
+    {
+      "image": "https://i.ibb.co/vdKBTrs/anh-nhat-Pd-ALQmf-Eqv-E-unsplash-1.jpg",
+      
+      "subTitle": "Samsung has long been a pioneer in the world of mobile technology, consistently pushing boundaries and setting new standards for innovation. Their extensive range of phones caters to a wide spectrum of users, from tech enthusiasts to everyday consumers.",
+      "interval": 500
+    },
+    {
+      "image": "https://i.ibb.co/B3WDsNp/istockphoto-1587018173-1024x1024.jpg",
+      
+      "subTitle": "Google, an industry trailblazer since its inception in 1998, is synonymous with innovation and technological prowess. From its pioneering search engine to boundary-pushing ventures like self-driving cars through Waymo, Google consistently redefines what's possible in the digital realm.",
+      "interval": 2500
+    }
+  ]

@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
 import Star from '../../Components/Banner/Section/Star';
+import {AiOutlineDelete } from 'react-icons/ai';
 const ViewCart = ({ cart ,carts,setCarts}) => {
   const { _id, image, name, price, brandName ,rating} = cart;
 
@@ -48,7 +49,7 @@ const ViewCart = ({ cart ,carts,setCarts}) => {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="p-6">
+          <div className="p-6 text-left">
             <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-pink-500 uppercase">
               {brandName}
             </h6>
@@ -60,29 +61,16 @@ const ViewCart = ({ cart ,carts,setCarts}) => {
             </p>
             <Star rating={rating}></Star>
 
-            <a className="inline-block" href="#">
+            <a className="inline-block mt-10" href="#">
               <button
                 onClick={() => handleDelete(_id)}
                 className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-pink-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
               >
+                <AiOutlineDelete className='text-xl'/>
                 Delete
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  className="w-4 h-4"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  ></path>
-                </svg>
+               
               </button>
             </a>
           </div>

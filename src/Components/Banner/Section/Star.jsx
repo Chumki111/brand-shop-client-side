@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import { FaStarHalfAlt,FaStar } from 'react-icons/fa';
+import { FaStarHalfAlt,FaStar } from 'react-icons/Fa';
 import {AiOutlineStar } from 'react-icons/ai';
 
 const Star = ({rating}) => {
@@ -10,7 +10,7 @@ const Star = ({rating}) => {
         return(
             <span key={index}> 
             {
-                rating >= index + 1 ? <FaStar className=' text-xl '/> : rating >= number ? <FaStarHalfAlt className=' text-xl '/> : <AiOutlineStar className=' text-xl '/>
+                rating >= index + 1 ? <FaStar className='  '/> : rating >= number ? <FaStarHalfAlt className=' text-xl '/> : <AiOutlineStar className=' text-xl '/>
             }
             
             </span>
@@ -18,7 +18,7 @@ const Star = ({rating}) => {
         )
     })
     return (
-        <div className='flex text-amber-400'>
+        <div className='flex text-amber-400 text-xl'>
             {ratingStar}
         </div>
     );

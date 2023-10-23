@@ -5,6 +5,7 @@ import Star from './Star';
 
 
 
+
 const BrandCard = ({ brand }) => {
     const { _id,image, name, someDescription, type, rating, price, brandName } = brand
 
@@ -13,7 +14,9 @@ const BrandCard = ({ brand }) => {
 
     return (
       
-        <div className='font-fontRancho'>
+       <div>
+       
+         <div className='font-fontRancho'>
            <div className="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
   <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
     <img
@@ -23,7 +26,7 @@ const BrandCard = ({ brand }) => {
     <div className="absolute  inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
    
   </div>
-  <div className="p-6 ">
+  <div className="p-6 flex-grow">
     <div className="flex items-center justify-between mb-3 ">
       <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
         {name}
@@ -48,7 +51,7 @@ const BrandCard = ({ brand }) => {
     </p>
      
    <div className='flex-grow'>
-   <p className=" font-fontRaleway   text-justify text-base antialiased font-light leading-relaxed text-gray-700 flex flex-col ">
+   <p className= "font-fontRaleway   text-justify text-base antialiased font-light leading-relaxed text-gray-700  ">
       {someDescription}
     </p>
    </div>
@@ -81,6 +84,7 @@ const BrandCard = ({ brand }) => {
   </div>
 </div>
         </div>
+       </div>
        
        
     );
